@@ -1,0 +1,239 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'idroid';
+  src: url('fontes/idroid.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #84E1AD;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CABEÇALHO */
+
+header {
+    background-image: linear-gradient(to top, #1B5936, #22733F, #2A8C4C, #39BF68, #3DD973);
+    width: 100%;
+    padding-bottom: 10px;
+    box-shadow: 0px 1px 12px black;
+}
+
+header > h1 {
+    margin-top: 0;
+    padding-top: 20px;
+    text-align: center;
+    font-family: 'bebas neue', sans-serif;
+    color: whitesmoke;
+    font-weight: lighter;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+}
+
+header > p {
+    text-align: center;
+    color: rgba(245, 245, 245, 0.832);
+    font-size: large;
+    max-width: 35rem;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+    
+}
+header > nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 20px;
+    box-shadow: 0px, 7px, 7px, black;
+}
+
+header > nav > a {
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    font-size: small;
+    font-weight: bold;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+header > nav > a:hover {
+    background-color: #2A8C4C;
+    color: #3DD973;
+    padding: 8px;
+}
+
+/* Conteudo Principal */
+
+main {
+    background-color: #ffffff;
+    box-shadow: 0px 1px 5px black;
+    min-width: 320px;
+    max-width: 800px;
+    margin: 0px 143px 15px;
+    margin: auto;
+    padding: 1.5rem 2rem;
+    border-radius: 0 0 15px 15px;
+}
+
+main > article > h1 {
+    margin-top: 0;
+    font-family: 'idroid', sans-serif;
+    color: #1B5936;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-weight: lighter;
+    line-height: 1.2;
+}
+ main > article > h2 {
+    font-family: idroid, sans-serif;
+    color: #1B5936;
+    font-weight: lighter;
+    font-size: clamp(1.1rem, 3vw, 1.7rem);
+    background-image: linear-gradient(to right, #BEE4CF, #FDFEFD);
+ }
+
+ /* PARÁGRAFOS */
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-indent: 2em;
+    line-height: 1.4;
+}
+
+/* IMAGENS */
+
+   main img {
+        width: 100%;
+    }
+
+    main img.pequena {
+   
+        max-width: 350px;
+        display: block;
+        margin: auto;
+
+    }
+
+/* VÍDEOS */
+    #video {
+        width: auto;
+        display: flex;
+        justify-content: center;
+        background-color: #1B5936;
+        padding: 20px 30px;
+    }
+
+    #video iframe {
+        width: 100%;
+        max-width: 800px;
+    }
+
+/*CONTEUDO COMPLEMENTAR */
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ main aside {
+    background-color: #C5EBD6;
+    margin-top: 25px;
+    border-radius: 15px;
+    padding: 0 10px 10px 10px;
+    box-shadow: 3px 3px 8px black;
+ }
+
+ main aside  h3 {
+    color: whitesmoke;
+    background-color: #1B5936;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    margin: -10px -10px 0 -10px;
+    border-radius: 10px 10px 0 0;
+ }
+
+ main a {
+    background-color: #3DD973;
+    padding: 2px;
+    
+ }
+
+ main a::after {
+    content: " 🔗";
+    font-size: 0.85em;
+    display: inline-block;
+ }
+
+ main p {
+    margin: 15px 0px;
+    text-align: justify;
+}
+
+ .fonte { font-family: Arial, Helvetica, sans-serif;
+ }
+
+ .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+    
+ }
+
+ .flex ul {
+    flex: 1 1 220px;
+    list-style-type: '\2714\00a0';
+    list-style-position: inside;
+ }
+
+ .verde {
+    font-weight: bold;
+    color: #1B5936;
+ }
+
+ .lfoot {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+
+ }
+ /* RODAPE */
+footer {
+    background-color: #1B5936;
+    padding: 5px;
+}
+
+footer > p {
+    text-align: center;
+    color: whitesmoke;
+    margin: 0;
+    font-size: 80%;
+}
+
+/* TELAS MENORES */
+
+@media screen and (max-width: 600px) {
+
+    main {
+        width: calc(100% - 1rem);
+        padding: 1rem;
+    }
+
+    header > nav {
+        gap: 12px;
+        padding: 0 10px;
+    }
+
+    p {
+        text-indent: 1em;
+    }
+
+}
+
